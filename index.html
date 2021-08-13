@@ -1,28 +1,478 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="index.css" rel="stylesheet">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <!-- Optional JavaScript; choose one of the two! -->
+  <link href="index.css" rel="stylesheet">
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <!--font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
-  </body>
+<!--font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
+
+
+  <title>Bootstrap Web-site</title>
+</head>
+
+<body>
+
+
+  <header>
+    <!--navbar-->
+    <div >
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sample Web-site</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Courses
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Html</a></li>
+                  <li><a class="dropdown-item" href="#">CSS</a></li>
+                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                  <li><a class="dropdown-item" href="#">BootStarp</a></li>
+                  <li><a class="dropdown-item" href="#">React</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Mern Stack</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#form">Contact</a>
+              </li>
+            </ul>
+
+            <div class="d-grid gap-2 d-md-block">
+              <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Login</button>
+            </div>
+
+            <!--modal login-->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                  
+                      </form>
+                  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--modal ends-->
+
+          
+            
+          </div>
+        </div>
+      </nav>
+<!--navabr ends-->
+
+     </div>
+  </header>
+
+ <!-- image silder croasal-->
+  <section>
+    
+     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/p2.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/p3.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/p1.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/p4.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>fouth slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!-- image silder croasal-->
+
+
+
+  <!--Aboust us-->
+  <section>
+    <div class="my-4 font-heading" id="about">
+      <h1 class="text-center">About Us</h1>
+      <hr width="21%" class="mx-auto" />
+    </div>
+  </section>
+
+  <!--About us card-->
+  <section>
+    <div class="row container mx-5 mx-auto ">
+      <div class="col-lg-6 col-md-6 col-12 ">
+        <figure class="image">
+          <img src="./images/andras-vas-Bd7gNnWJBkU-unsplash.jpg" alt="laptop image" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 my-auto font-heading font-para ">
+        <h3>My Journey</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero numquam esse, sequi laborum enim nemo eaque
+          unde labore fugiat dolore fuga sunt facilis? Quis deserunt, eos nobis laborum eveniet ab?</p>
+        <button type="button" class="btn btn-outline-primary display-3 " data-bs-toggle="tooltip"
+          data-bs-placement="right" title="Want to no more">Show More</button>
+      </div>
+
+    </div>
+  </section>
+  <!--About us card end-->
+
+
+
+  <!--Services-->
+  <section class="my-5">
+    <!--services type-->
+    <div class="bg-light ">
+      <div class="font-heading py-3">
+        <h1 class="text-center ">Sercives</h1>
+        <hr width="21%" class="mx-auto" />
+      </div>
+      <!--services Card-->
+      <div class="row services container mx-auto">
+        <div class="col-lg-4 col-md-4 col-10 mx-auto">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/a2.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-10 mx-auto">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/a3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-10 mx-auto">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./images/a2.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center pb-3">
+        <button type="button" class="btn btn-outline-primary display-3   " data-bs-toggle="tooltip"
+          data-bs-placement="right" title="Want to no more">Show More</button>
+      </div>
+    </div>
+  </section>
+  <!--Setvives end-->
+
+
+
+  <!--Gallery Start-->
+  <section class="my-5" id="gallery">
+    <div class="my-4 font-heading">
+      <h1 class="text-center">Gallery</h1>
+      <hr width="21%" class="mx-auto" />
+    </div>
+
+    <!--showing picture-->
+    <div class="row container mx-auto gx-3 ">
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-xxl-3 col-10 mx-auto">
+        <figure>
+          <img src="./images/sample.jpeg" alt="laptop picture" class="img-fluid">
+        </figure>
+      </div>
+
+    </div>
+  </section>
+  <!--Gallery end-->
+
+
+  <!--Checkout part-->
+  <section class="my-5 ">
+    <div class="text-center text-capitalize  py-4 font-heading font-para changebgcolour">
+      <h1 class="text-white">Check out my facebook account</h1>
+      <p class="text-white"><strong>failure is a word unkown to me </strong></p>
+      <a href="https://web.facebook.com" target="abc">
+        <button type="button" class="btn btn-outline-light"><strong>check now</strong></button>
+      </a>
+    </div>
+
+  </section>
+  <!--Checkout part ends-->
+
+
+
+
+
+  <!--Contact us-->
+  <section>
+    <div class="my-4 font-heading">
+      <h1 class="text-center text-capitalize">contact us</h1>
+      <hr width="21%" class="mx-auto" />
+    </div>
+     <!--Contact us end-->
+
+
+
+
+    <!--form-->
+    <div class="row container  mx-auto justify-content-center my-4" id="form">
+      <div class="col-lg-7 md-8 co-10">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputName" aria-describedby="name">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail12" aria-describedby="emailHelp">
+            <div id="emailHelp1" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class=" me-2">Gender</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleDataList" class="form-label">City</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+              <option value="Karachi"></option>
+              <option value="Hyderabad"></option>
+              <option value="Lahore"></option>
+              <option value="Isalmabad"></option>
+              <option value="Abbottabad"></option>
+            </datalist>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+     <!--form ends-->
+
+
+
+
+  <!--Footer-->
+<footer>
+  <div class="bg-black text-white text-center">
+    <p>@copyright 2021</p>
+  </div>
+</footer>
+
+
+
+
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+
+
+  <!--script for tooltip-->
+  <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+  <!--script for tooltip-->
+
+</body>
+
 </html>
